@@ -1,0 +1,81 @@
+{% extends 'header.html' %}
+
+{% block title %} Welcome to {% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/images/favicon3.ico') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <div class="container audiobook">
+        <div class="container text-center">
+            <h3>EL PRINCIPITO<br>Antoine de Saint-Exupery</h3>
+            <h5>EL PRINCIPITO</h5>
+            <audio controls>
+                <source src="{{ url_for('synthesize', lang='es', text=el_principito_speech) }}" type="audio/mpeg">
+                         Your browser does not support the audio element.
+            </audio>
+            <div class="mb-1">{{ el_principito_speech }}</div>
+            <div class="container mb-1">
+                <button type="button" class="btn btn-outline-primary" id="principito-button-1">Principito 🔥1🔥</button>
+            </div>
+            <div class="container mb-1">
+                <button type="button" class="btn btn-outline-primary" id="principito-button-2">Principito 🔥2🔥</button>
+            </div>
+            <div class="container mb-1">
+                <button type="button" class="btn btn-outline-primary" id="principito-button-3">Principito 🔥3🔥</button>
+            </div>
+            <div class="container mb-1">
+                <button type="button" class="btn btn-outline-primary" id="principito-button-4">Principito 🔥4🔥</button>
+            </div>
+            <div class="container mb-1">
+                <button type="button" class="btn btn-outline-primary" id="principito-button-5">Principito 🔥5🔥</button>
+            </div>
+            <div class="container mb-1">
+                <button type="button" class="btn btn-outline-primary" id="principito-button-6">Principito 🔥6🔥</button>
+            </div>
+            <div class="container mb-1">
+                <button type="button" class="btn btn-outline-primary" id="principito-button-7">Principito 🔥7🔥</button>
+            </div>
+
+            <hr>
+
+            <h3>STELLA</h3>
+            <h5>Author: Chat GPT 😝</h5>
+            <audio controls>
+                <source src="{{ url_for('synthesize', lang='fr', text=stella_speech) }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="mb-1">{{ stella_speech }}</div>
+            <div class="container">
+                <button type="button" class="btn btn-outline-primary" id="stella-button">Stella ¡!¡</button>
+            </div>
+
+            <hr>
+
+            <h3>LES MISÉRABLES</h3>
+            <h5>Author: Victor Hugo</h5>
+            <audio controls>
+                <source src="{{ url_for('synthesize', lang='en', text=les_miserables_speech) }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="mb-1">{{ les_miserables_speech }}</div>
+            <div class="container">
+                <button type="button" class="btn btn-outline-primary" id="les-miserables-button">Les Miserables ¡!¡</button>
+            </div>
+
+            <div class="container clearfix gif-img">
+                <img class="left-img" src="https://media3.giphy.com/media/EyYYkV1bqr8Mo/200w.webp?cid=ecf05e475j5p26ofkesom4m641gkai259n9eou5mzkkebzns&ep=v1_gifs_search&rid=200w.webp&ct=g">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ url_for('static', filename='js/main.js')}}"></script>
+
+{% endblock %}
+
+{% block footer %} {% endblock %}

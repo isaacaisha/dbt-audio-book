@@ -1,0 +1,66 @@
+h1 {
+    background-color: #AEFAFC;
+    border: 0.1rem solid #1295FA;
+    border-radius: 0.5rem;
+    color: #9126E8;
+    font-size: 1.7rem;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    background-color: #C7C7C7;
+    text-decoration: underline;
+}
+
+h5 {
+    background-color: #C7C7C7;
+}
+
+.gif-img {
+    margin-top: 3rem;
+}
+
+.left-img {
+    border-radius: 1rem;
+    #float: left;
+    width: 100%;
+}
+
+.right-img {
+    border-radius: 1rem;
+    float: right;
+    width: 37%;
+}
+#footer {
+    margin: 1rem 0 3rem;;
+    text-align: center;
+}
+
+.fa-inverse {
+    background-color: #9126E8;
+    border: 0.1rem solid #AEFAFC;
+    border-radius: 55%;
+    color: #fff;
+}
+
+.fa-inverse:hover {
+    color: #6ABFA6;
+    width: 3.7rem;
+}
+
+.fas {
+    color: transparent !important;
+}
+
+.copyright {
+    background-color: #AEFAFC;
+    border: 0.1rem solid #1295FA;
+    border-radius: 0.5rem;
+    color: #9A30F3;
+    padding: 0.3rem;
+}
+
+# --------------------------------------------------- 🔥👌🏿💚😇❤️🔥 ---------------------------------------------------#
