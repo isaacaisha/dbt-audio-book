@@ -11,6 +11,32 @@ document.querySelector('audio').addEventListener('error', function (e) {
     console.error('Audio playback error:', e);
 });
 
+// Add a click event listener to your buttons
+document.querySelectorAll('[id^="principito-button-"]').forEach(function(button) {
+    button.addEventListener("click", function() {
+        var audioBookUrl = this.getAttribute("data-audiobook");
+        // Send a POST request to the server with the data
+        fetch("/play-audiobook", {
+            method: "POST",
+            body: JSON.stringify({ audiobookUrl: audioBookUrl }),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        .then(function(response) {
+            if (response.ok) {
+                // Handle successful response (e.g., play audio)
+                // You may want to redirect or handle audio playback here
+            } else {
+                console.error("Error in POST request:", response.statusText);
+            }
+        })
+        .catch(function(error) {
+            console.error("Error:", error);
+        });
+    });
+});
+
 // Add a click event listener to the button with the id "principito-button-1"
 document.getElementById("principito-button-1").addEventListener("click", function() {
     // No need to prevent default behavior
