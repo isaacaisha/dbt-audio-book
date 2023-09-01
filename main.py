@@ -1,7 +1,8 @@
 from flask import Flask, render_template, Response
-from dictionary import (el_principito, el_principito_book_1, el_principito_book_2, el_principito_book_3,
+from dictionary import (el_principito, el_principito_book_2, el_principito_book_3,
                         el_principito_book_4, el_principito_book_5, el_principito_book_6, el_principito_book_7,
                         stella, stella_book, les_miserables, les_miserables_book)
+from principito_book_1 import el_principito_book_1
 from gtts import gTTS
 import io
 from datetime import datetime
