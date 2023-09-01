@@ -23,33 +23,33 @@ def generate_speech(text, lang='fr'):  # Set lang='fr' for French
         return None
 
 
-@app.route("/play-audiobook", methods=["POST"])
-def play_audiobook():
-    data = request.get_json()
-    audiobook_url = data.get("audiobookUrl")
-
-    # Determine the language and text based on the audiobook URL
-    if audiobook_url == "/p-book-1":
-        lang = 'es'  # Spanish
-        text = el_principito_book_1
-    elif audiobook_url == "/p-book-2":
-        lang = 'es'  # Spanish
-        text = el_principito_book_2
-    elif audiobook_url == "/p-book-3":
-        lang = 'es'  # Spanish
-        text = el_principito_book_3
-    elif audiobook_url == "/p-book-4":
-        lang = 'es'  # Spanish
-        text = el_principito_book_4
-    elif audiobook_url == "/p-book-5":
-        lang = 'es'  # Spanish
-        text = el_principito_book_5
-    elif audiobook_url == "/p-book-6":
-        lang = 'es'  # Spanish
-        text = el_principito_book_6
-    elif audiobook_url == "/p-book-7":
-        lang = 'es'  # Spanish
-        text = el_principito_book_7
+#@app.route("/play-audiobook", methods=["POST"])
+#def play_audiobook():
+#    data = request.get_json()
+#    audiobook_url = data.get("audiobookUrl")
+#
+#    # Determine the language and text based on the audiobook URL
+#    if audiobook_url == "/p-book-1":
+#        lang = 'es'  # Spanish
+#        text = el_principito_book_1
+#    elif audiobook_url == "/p-book-2":
+#        lang = 'es'  # Spanish
+#        text = el_principito_book_2
+#    elif audiobook_url == "/p-book-3":
+#        lang = 'es'  # Spanish
+#        text = el_principito_book_3
+#    elif audiobook_url == "/p-book-4":
+#        lang = 'es'  # Spanish
+#        text = el_principito_book_4
+#    elif audiobook_url == "/p-book-5":
+#        lang = 'es'  # Spanish
+#        text = el_principito_book_5
+#    elif audiobook_url == "/p-book-6":
+#        lang = 'es'  # Spanish
+#        text = el_principito_book_6
+#    elif audiobook_url == "/p-book-7":
+#        lang = 'es'  # Spanish
+#        text = el_principito_book_7
 
 
 @app.route('/', methods=['GET', 'POST'])
